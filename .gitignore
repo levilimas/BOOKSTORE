@@ -1,7 +1,5 @@
 node_modules
 .dockrigone
-package.json
 package-lock.json
-tsconfig.json
 yarn.lock
 
