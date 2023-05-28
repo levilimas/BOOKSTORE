@@ -8,6 +8,9 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "prisma": {
+    "schema": "src/database/prisma/schema.prisma"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
