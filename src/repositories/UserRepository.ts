@@ -38,6 +38,43 @@ class UserRepository {
 
         return foundUser;
     }
+    async findUserById(id: number): Promise<User | null> {
+        const user = await prisma.user.findUnique({
+          where: {
+            id,
+          },
+        });
+    
+        return user;
+      }
+    
+      async getAllUsers(): Promise<User[]> {
+        const users = await prisma.user.findMany();
+    
+        return users;
+      }
+    
+      async updateUser({ id, name, email }: User): Promise<User> {
+        const updatedUser = await prisma.user.update({
+          where: {
+            id,
+          },
+          data: {
+            name,
+            email,
+          },
+        });
+    
+        return updatedUser;
+      }
+    
+      async deleteUser(id: number): Promise<void> {
+        await prisma.user.delete({
+          where: {
+            id,
+          },
+        });
+      }
 }
 
 export { UserRepository }

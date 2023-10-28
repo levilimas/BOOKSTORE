@@ -7,7 +7,7 @@ router.get('/', (req: Request, res: Response) => {
     res.json({ message: 'hello world with Typescript' })
   })
 
-  const createUserController = new CreateUserController();
+const createUserController = new CreateUserController();
 
  router.post("/user/create", createUserController.execute);
   

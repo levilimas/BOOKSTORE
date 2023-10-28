@@ -7,6 +7,15 @@ type DTOCreateUserService = {
 }
 
 class CreateUserService {
+    deleteUser(id: number) {
+        throw new Error("Method not implemented.");
+    }
+    getAllUsers(): void {
+        throw new Error("Method not implemented.");
+    }
+    updateUser(id: number, name: string, email: string) {
+        throw new Error("Method not implemented.");
+    }
     /**
      * Serviço de criação de usuário
      * @param name Nome do usuário a ser criado
